@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "data_mapper/sql_finders/version"
 
 Gem::Specification.new do |s|
-  s.name        = "dm-sql-finders"
+  s.name        = "sbf-dm-sql-finders"
   s.version     = DataMapper::SQLFinders::VERSION
   s.authors     = ["d11wtq"]
   s.email       = ["chris@w3style.co.uk"]
@@ -22,13 +22,13 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  DM_VERSION ||= ">= 1.2.0"
+  DM_VERSION ||= ">= 1.3.0"
 
-  s.add_runtime_dependency "dm-core",               DM_VERSION
-  s.add_runtime_dependency "dm-do-adapter",         DM_VERSION
+  s.add_runtime_dependency "sbf-dm-core",               DM_VERSION
+  s.add_runtime_dependency "sbf-dm-do-adapter",         DM_VERSION
 
-  s.add_development_dependency "rspec",             "~> 2.6"
-  s.add_development_dependency "dm-migrations",     DM_VERSION
-  s.add_development_dependency "dm-aggregates",     DM_VERSION
-  s.add_development_dependency "dm-sqlite-adapter", DM_VERSION
+  s.add_development_dependency "rspec",             "~> 3.13"
+  s.add_development_dependency "sbf-dm-migrations",     DM_VERSION
+  s.add_development_dependency "sbf-dm-aggregates",     DM_VERSION
+  s.add_development_dependency "sbf-dm-sqlite-adapter", DM_VERSION
 end
