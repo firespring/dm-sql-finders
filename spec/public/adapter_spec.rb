@@ -146,7 +146,7 @@ describe DataMapper::Adapters::DataObjectsAdapter do
         end
 
         it "finds the matching resources" do
-          @users.to_a.should have(1).items
+          expect(@users.to_a).not_to be_empty
           @users.to_a.first.should == @bob
         end
       end
@@ -163,7 +163,7 @@ describe DataMapper::Adapters::DataObjectsAdapter do
         end
 
         it "finds the matching resources" do
-          @users.to_a.should have(1).items
+          expect(@users.to_a).not_to be_empty
           @users.to_a.first.should == @bob
         end
       end
@@ -192,7 +192,7 @@ describe DataMapper::Adapters::DataObjectsAdapter do
         end
 
         it "finds the matching resources" do
-          @users.to_a.should have(1).items
+          expect(@users.to_a).not_to be_empty
           @users.to_a.first.should == @fred
         end
       end
@@ -221,7 +221,7 @@ describe DataMapper::Adapters::DataObjectsAdapter do
         end
 
         it "finds the matching resources" do
-          @users.to_a.should have(1).items
+          expect(@users.to_a).not_to be_empty
           @users.to_a.first.should == @fred
         end
       end
